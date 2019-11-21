@@ -1,40 +1,40 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <title>
-            Set the background color of the page after clicking the button
-        </title>
-    </head>
 
-    <body style = "text-align:center;">
+<head>
+  <title>
+    Set the background color of the page after clicking the button
+  </title>
+</head>
 
-        <p id = "GFG_UP" style =
-            "font-size: 16px; font-weight: bold;">
-        </p>
+<body style="text-align:center;">
 
-        <button onclick = "gfg_Run()">
-            Click here
-        </button>
+  <p id="GFG_UP" style="font-size: 16px; font-weight: bold;">
+  </p>
 
-        <p id = "GFG_DOWN" style =
-            "color:green; font-size: 20px; font-weight: bold;">
-        </p>
+  <button onclick="gfg_Run()">
+    Click here
+  </button>
 
-        <script>
-            var el_up = document.getElementById("GFG_UP");
-            var el_down = document.getElementById("GFG_DOWN");
-            var str = "Click on button to change the background color";
+  <p id="GFG_DOWN" style="color:green; font-size: 20px; font-weight: bold;">
+  </p>
 
-            el_up.innerHTML = str;
+  <script>
+    var el_up = document.getElementById("GFG_UP");
+    var el_down = document.getElementById("GFG_DOWN");
+    var str = "Click on the button to change the background color";
 
-            function changeColor(color) {
-                document.body.style.background = color;
-            }
+    el_up.innerHTML = str;
 
-            function gfg_Run() {
-                changeColor('#4361F0');
-                el_down.innerHTML;
-            }
-        </script>
-    </body>
+    function changeColor(color) {
+      document.body.style.background = color;
+    }
+
+    function gfg_Run() {
+      changeColor("#" + ((1 << 24) * Math.random() | 0).toString(16));
+      el_down.innerHTML;
+    }
+  </script>
+</body>
+
 </html>
